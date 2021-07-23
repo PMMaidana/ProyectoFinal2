@@ -9,6 +9,9 @@ app.use(express.static(__dirname + '/public'));
 const router = require('./routes/routes');
 app.use('/api', router);
 
+const routerCarrito = require('./routes/routescarrito');
+app.use('/api', routerCarrito);
+
 const PORT = process.env.PORT || 8081;
 
 const server = http.listen(PORT, () => {
