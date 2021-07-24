@@ -13,8 +13,7 @@ class Sqlite3 {
     }
 
     listarPorId(id){
-        let producto = this.productos.find(e => e.id === id);
-        if(producto==undefined){
+        if(id==undefined){
             producto = 'Producto no encontrado';
         }
         knex.from('productos').select('*').where('id', id)

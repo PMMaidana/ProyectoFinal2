@@ -22,7 +22,7 @@ router.get('/productos/listar', (req, res) => {
     }
 });
 
-router.get('/productos/listar/:id', (req, res) => {
+router.get('/productos/listar/:id?', (req, res) => {
     try {
         res.send(instancia.listarPorId(parseInt(req.params.id)));
     } catch (error) {
